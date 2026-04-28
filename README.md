@@ -21,7 +21,7 @@ Implementation of a barrel shifter with two direction logic rotation of the bits
 With simple combinational logic, this project implements a dual priority encoder that detects the position of the two most significant bits that have a value of '1' and returns their position numbers in two different 7 Segment LED Displays.
 
 #### 5. 2 digit BCD Incrementor
-Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented in 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
+Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented on 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
 
 #### 6. Parking Lot Occupancy Counter
-With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. 
+With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. The counter is represented on 7 Segment LED Displays, and there are also flags for "Full Parking Lot" and "Space Available".
