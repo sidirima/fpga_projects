@@ -4,11 +4,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity logicGateSelector_top is
-    Port( 
-			extA : 	in  STD_LOGIC;
-         extB : 	in  STD_LOGIC;
-         extY : 	out  STD_LOGIC;
-         extSel : in  STD_LOGIC_VECTOR (2 downto 0));
+	Port(
+		extA : 	in  STD_LOGIC;
+        extB : 	in  STD_LOGIC;
+    	extY : 	out  STD_LOGIC;
+        extSel : in  STD_LOGIC_VECTOR (2 downto 0)
+		);
 end logicGateSelector_top;
 
 architecture Structural of logicGateSelector_top is
