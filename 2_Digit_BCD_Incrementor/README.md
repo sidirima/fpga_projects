@@ -1,5 +1,5 @@
 # 2 Digit BCD Incrementor
-This project is an experiment on Chapter 4 of the book "FPGA Programming by VHDL Examples" by Dr. Pong P. Chu.
+This project is the Experiment 3.9.3 on Chapter 3 of the book "_FPGA Programming by VHDL Examples_" by Dr. Pong P. Chu.
 ## How it works
 In the top level module, there are 2 instantiations of the bcd_incrementor entity, the purpose of which is to perform incrementation by 1 bit of two BCD formatted numbers. On each of the bcd_incrementor entities, there is a carry output, in case of an overflow in the incrementation procedure. In this case, if there is an overflow in the LSD, the carry output is inserted in the next incrementing entity. If there in an overflow at the MSD entity, the incrementor has reached its maximum capacity, and the Overflow output is enabled.
 
