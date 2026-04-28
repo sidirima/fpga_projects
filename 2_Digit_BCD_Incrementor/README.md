@@ -12,10 +12,10 @@ In the matter of outputs, the BCD numbers are represented with the use of 7 Segm
   - [bcd_incrementor.vhd](bcd_incrementor.vhd)
   - [hex_to_7_segment.vhd](hex_to_7_segment.vhd)
 ## Inputs & Outputs
-INPUTS
+**INPUTS**
 - a → 8 bit input (2x4 bits) for the two numbers on DIP Switches
 
-OUTPUTS
+**OUTPUTS**
 - sseg0 → LSD output on 7 Segment Display
 - sseg1 → MSD output on 7 Segment Display
 - ovf → Overflow flag on LED
