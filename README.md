@@ -23,4 +23,5 @@ With simple combinational logic, this project implements a dual priority encoder
 #### 5. 2 digit BCD Incrementor
 Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented in 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
 
-#### 6. 
+#### 6. Parking Lot Occupancy Counter
+With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. 
