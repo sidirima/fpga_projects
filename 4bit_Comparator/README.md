@@ -10,9 +10,9 @@ The input numbers are inserted as binary with the use of 2 DIP switches for each
 Therefore, there are 3 different outputs which are represented by 3 different LEDs.
 
 ## Module Structure
-- [comparator_4bit_top](comparator_4bit_top.vhdl)
-  - [comparator_4bit](comparator_4bit.vhdl)
-    - [comparator_2bit](comparator_2bit.vhdl)
+- [comparator_4bit_top](comparator_4bit_top.vhd)
+  - [comparator_4bit](comparator_4bit.vhd)
+    - [comparator_2bit](comparator_2bit.vhd)
 ## Inputs & Outputs
 **INPUTS**
 - extA → 4 bit input for number A (DIP switches)
