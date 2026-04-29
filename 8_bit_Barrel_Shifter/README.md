@@ -14,7 +14,6 @@ There is a single 8bit output on the top module, which is used for representing 
 - [multi_function_barrel_shifter_top](multi_function_barrel_shifter_top.vhd)
   - [barrel_shifter_8bit_left](barrel_shifter_8bit_left.vhd)
   - [barrel_shifter_8bit_right](barrel_shifter_8bit_right.vhd)
-  - 
 ## Inputs & Outputs
 **INPUTS**
 - ext_a → 8 bit input for number A (DIP switches)
