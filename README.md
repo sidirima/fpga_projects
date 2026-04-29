@@ -11,10 +11,10 @@ The code is written in VHDL-93, due to device limitations, as the FPGA used runs
 #### 1. Logic Gate Selector
 A simple first project to understand the nature of the VHDL programming language, by implementing all of the basic logic functions in a single multiplexer.
 
-#### 2. 4-Bit Comparator
+#### 2. [4-Bit Comparator](/4bit_Comparator)
 The scope of this project is the exploration of versatility of VHDL programming. We instantiate 2-bit comparators to implement a 4-bit comparator.
 
-#### 3. 8-bit Barrel Shifter
+#### 3. [8-bit Barrel Shifter](/8_bit_Barrel_Shifter)
 Implementation of a barrel shifter with two direction logic rotation of the bits (left or right). We can select the amount of rotating bits with the use of a multiplexer.
 
 #### 4. 12-bit Dual Priority Encoder
