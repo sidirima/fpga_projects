@@ -22,5 +22,7 @@ There is a single 8bit output on the top module, which is used for representing 
 
 **OUTPUTS**
 - ext_y → 8 bit output for rotated number (LEDs)
-## 
-
+  
+## Technical Limitations
+- The project was implemented in Xilinx ISE suite v10.1, which is a legacy product, so it is formatted in VHDL-93.
+- The outputs and inputs of the Spartan-II board I used were Active Low, so in the top level module every input and output is inverted.
