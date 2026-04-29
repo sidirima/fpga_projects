@@ -8,9 +8,9 @@ The input numbers are inserted as binary data with the use of 4 DIP switches for
 In the matter of outputs, the BCD numbers are represented with the use of 7 Segment LED Displays, one for each number. The signals to activate each segment are created in the hex_to_7_segment.vhd module, which is instantiated twice in the top level module.
 
 ## Module Structure
-- [bcd_incrementor_top.vhd](bcd_incrementor_top.vhd)
-  - [bcd_incrementor.vhd](bcd_incrementor.vhd)
-  - [hex_to_7_segment.vhd](hex_to_7_segment.vhd)
+- [bcd_incrementor_top](bcd_incrementor_top.vhd)
+  - [bcd_incrementor](bcd_incrementor.vhd)
+  - [hex_to_7_segment](hex_to_7_segment.vhd)
 ## Inputs & Outputs
 **INPUTS**
 - a → 8 bit input (2x4 bits) for the two numbers (DIP Switches)
