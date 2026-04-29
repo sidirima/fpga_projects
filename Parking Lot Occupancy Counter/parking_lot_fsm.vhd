@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity parking_lot_fsm is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-			  sw : in STD_LOGIC_VECTOR(1 downto 0);
+		   sw : in STD_LOGIC_VECTOR(1 downto 0);
            a : in  STD_LOGIC;
            b : in  STD_LOGIC;
            enter_car : out  STD_LOGIC;
