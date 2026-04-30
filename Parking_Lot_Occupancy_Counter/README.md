@@ -38,6 +38,6 @@ The output of the counter is represented on 2 different 7 Segment LED displays. 
 - ovf → 2 bit Overflow flag (LEDs)
 - full → _FULL_ flag (LED)
 - vacant → _VACANCY / SPACE AVAILABLE_ flag (LED)
-_
-*Note: The VHDL modules are implemented with Active-Low logic I/O and Common Anode 7 Segment LED Displays.*_
+
+_*Note: The VHDL modules are implemented with Active-Low logic I/O and Common Anode 7 Segment LED Displays.*_
 
