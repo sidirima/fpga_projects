@@ -36,7 +36,8 @@ The output of the counter is represented on 2 different 7 Segment LED displays. 
 - sseg0 → LSD output (7 Segment Display)
 - sseg1 → MSD output (7 Segment Display)
 - ovf → 2 bit Overflow flag (LEDs)
-- full → FULL flag (LED)
-- vacant → VACANCY / SPACE AVAILABLE flag (LED)
-## 
+- full → _FULL_ flag (LED)
+- vacant → _VACANCY / SPACE AVAILABLE_ flag (LED)
+_
+*Note: The VHDL modules are implemented with Active-Low logic I/O and Common Anode 7 Segment LED Displays.*_
 
