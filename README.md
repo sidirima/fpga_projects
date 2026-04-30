@@ -8,7 +8,7 @@ The code is written in VHDL-93, due to device limitations, as the FPGA used runs
 2. [Pedroni, Volnei A. Digital Electronics and Design with VHDL. Amsterdam, Boston, 2008.](https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL96/Circuit%20Design%20with%20VHDL.pdf)
 
 ### Project Index
-#### 1. Logic Gate Selector
+#### [1. Logic Gate Selector](/Logic_Gate_Selector)
 A simple first project to understand the nature of the VHDL programming language, by implementing all of the basic logic functions in a single multiplexer.
 
 #### 2. [4-Bit Comparator](/4bit_Comparator)
@@ -26,6 +26,6 @@ Combinational logic at its peak! This simple circuit reads an 8bit binary number
 #### 6. Stopwatch with 4 Digits
 Using simple sequential logic (registers), this project implements a stopwatch with four digits, represented on 7 Segment LED Displays, and the functions of counting up or down and start / pause.
 
-#### 7. Parking Lot Occupancy Counter
+#### 7. [Parking Lot Occupancy Counter](Parking_Lot_Occupancy_Counter)
 With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. The counter is represented on 7 Segment LED Displays, and there are also flags for "Full Parking Lot" and "Space Available".
 
