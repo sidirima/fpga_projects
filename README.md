@@ -3,6 +3,11 @@
 This folder contains fun projects I implemented from examples from the following books, learning VHDL coding and FPGA implementation. Some of them were little tweaked, some of them are built from scratch.
 
 The code is written in VHDL-93, due to device limitations, as the FPGA used runs only in Xilinx ISE v10.1, which is a quite old version of a legacy suite. The FPGA used was a Spartan-II (XC2S100 - PQ208).
+<p align="center">
+  <img width="999" height="756" alt="image" src="https://github.com/user-attachments/assets/6a5e32f6-b022-41b0-a2cb-d6382c8bd3dc" />
+
+</p>
+
 ### Books
 1. [Chu, Pong P. FPGA Prototyping by VHDL Examples: Xilinx Spartan-3 Version. Hoboken, N.J: Wiley-Interscience, 2008.](https://blog.aku.edu.tr/ismailkoyuncu/files/2017/04/02_ebook.pdf)
 2. [Pedroni, Volnei A. Digital Electronics and Design with VHDL. Amsterdam, Boston, 2008.](https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL96/Circuit%20Design%20with%20VHDL.pdf)
