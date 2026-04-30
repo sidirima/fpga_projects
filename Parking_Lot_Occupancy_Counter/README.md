@@ -1,13 +1,17 @@
 # Parking Lot Occupancy Counter
 This project is the Experiment 5.5.3 on Chapter 5 of the book "_FPGA Programming by VHDL Examples_" by Dr. Pong P. Chu.
 ## How it works
-Imagine there is a parking lot entrance with two sensors (A and B) that detect the presence of a vehicle or human. Those two sensors are placed a few meters apart, so that only a vehicle stationed behind the bars of the parking lot could enable them both at the same time. Those two sensors are connected to a counter system that detects how many vehicles are inside the parking lot at any given moment. This project simulates those functionalities with the use of a simple counter implementation, that is being updated every time a car enters or exits the parking lot.
+Imagine there is a parking lot entrance with two sensors (A and B) that detect the presence of a vehicle or human. Those two sensors are placed a few meters apart, so that only a vehicle stationed behind the bars of the parking lot could enable them both at the same time. Those two sensors are connected to a counter system that detects how many vehicles are inside the parking lot at any given moment. This project simulates those functionalities with the use of a simple counter implementation, that is being updated every time a car enters or exits the parking lot. The Figure 5.11 below offers a visual diagram of the discussed concept.
+<p align="center">
+  <img width="364" height="344" alt="image" src="https://github.com/user-attachments/assets/a164d8a8-8fcd-4cf6-97a9-0ada79d49cc5" />
+</p>
+
 
 Furthermore, there is a maximum capacity of cars that can enter the parking lot, and this is an input that must be declared before starting the counter. To simulate this, we use an 8-bit input with DIP switches, so the maximum number of spaces in the parking lot is 255.
 
 The functionality of the entering or exiting procedures are checked in the parking_lot_fsm module and they are as follows:
-- Car Enters the Parking Lot: Sensor A Enabled → Sensor A & B Enabled → Sensor B Enabled → Sensors Disabled
-- Car Exits the Parking Lot: Sensor B Enabled → Sensor A & B Enabled → Sensor A Enabled → Sensors Disabled
+- _**Car Enters the Parking Lot**_: Sensor A Enabled → Sensor A & B Enabled → Sensor B Enabled → Sensors Disabled
+- _**Car Exits the Parking Lot**_: Sensor B Enabled → Sensor A & B Enabled → Sensor A Enabled → Sensors Disabled
 
 The two sensors are simulated with the use of two pushbuttons. There is also a third pushbutton used that performs the "Reset" function. Those pushbuttons are already physically debounced, so there is no implementation of a debouncer circuit in VHDL. 
 
