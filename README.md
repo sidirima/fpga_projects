@@ -13,7 +13,7 @@ The code is written in VHDL-93, due to device limitations, as the FPGA used runs
 2. [Pedroni, Volnei A. Digital Electronics and Design with VHDL. Amsterdam, Boston, 2008.](https://uodiyala.edu.iq/uploads/PDF%20ELIBRARY%20UODIYALA/EL96/Circuit%20Design%20with%20VHDL.pdf)
 
 ### Project Index
-#### [1. Logic Gate Selector](/Logic_Gate_Selector)
+#### 1. [Logic Gate Selector](/Logic_Gate_Selector)
 A simple first project to understand the nature of the VHDL programming language, by implementing all of the basic logic functions in a single multiplexer.
 
 #### 2. [4-Bit Comparator](/4bit_Comparator)
