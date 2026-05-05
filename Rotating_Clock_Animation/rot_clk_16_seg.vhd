@@ -14,7 +14,7 @@ end rot_clk_16_seg;
 
 architecture Behavioral of rot_clk_16_seg is
 	
-	constant DVSR : integer := 10000000; --Rotation Frequency = 25MHz / 5000000 = 5 Hz
+	constant DVSR : integer := 10000000; --Rotation Frequency = 25MHz / 10000000 = 2.5 Hz
 	signal ms_reg, ms_next : unsigned (23 downto 0); -- Registers for clock divider
 	signal ms_tick : STD_LOGIC;
 	
