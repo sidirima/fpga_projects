@@ -31,7 +31,7 @@ Combinational logic at its peak! This simple circuit reads an 8bit binary number
 #### 6. Stopwatch with 4 Digits
 Using simple sequential logic (registers), this project implements a stopwatch with four digits, represented on 7 Segment LED Displays, and the functions of counting up or down and start / pause.
 
-#### 7. [Rotating Clock Animation]
+#### 7. [Rotating Clock Animation](Rotating_Clock_Animation)
 An easy way to test your skills understanding counters, clock dividers and simple FSM design, with the help of a 16-Segment LED Display.
 A fun made project of a rotating "clock" sequence.
 
