@@ -8,7 +8,9 @@ Every time a VHS cassette was inserted in the VCR slot, there was the same imple
 the index markers of the recordings in the tape (a Philips proprietary system that was called "Tape Manager" and allowed databasing of VHS recordings in the VCR memory). 
 
 Anyway, in this project there is an implementation of a simple sequential counter. For each counted number, different segments of the LED display light up in sequence to create
-that rotating "clock" animation. The max state of the counter is 7, and then it recycles.
+that rotating "clock" animation. The max state of the counter is 7, and then it recycles. In the picture below, are the 7 states patterns of the display. Created with
+[Geocaching Toolbox](https://www.geocachingtoolbox.com/index.php?lang=en&page=segmentDisplay)
+<img width="321" height="59" alt="image" src="https://github.com/user-attachments/assets/1b936d8b-da14-46f2-b419-48470aad2c72" />
 
 In order for the animation to be seen clearly, we need to use a clock divider, because the counter is synchronous and the states change with a clock pulse. The crystal oscillator
 of the FPGA development board I used has a frequency of 25 MHz. The desired frequency I went with is 2.5 Hz, so the clock divider consists of a counter that counts up to 10000000.
