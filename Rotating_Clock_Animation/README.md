@@ -10,8 +10,8 @@ the index markers of the recordings in the tape (a Philips proprietary system th
 Anyway, in this project there is an implementation of a simple sequential counter. For each counted number, different segments of the LED display light up in sequence to create
 that rotating "clock" animation. The max state of the counter is 7, and then it recycles. In the picture below, are the 7 states patterns of the display. Created with
 [Geocaching Toolbox](https://www.geocachingtoolbox.com/index.php?lang=en&page=segmentDisplay)
-<img width="321" height="59" alt="image" src="https://github.com/user-attachments/assets/1b936d8b-da14-46f2-b419-48470aad2c72" />
-
+<p align = "center"> <img width="321" height="59" alt="image" src="https://github.com/user-attachments/assets/1b936d8b-da14-46f2-b419-48470aad2c72" />
+</p>
 In order for the animation to be seen clearly, we need to use a clock divider, because the counter is synchronous and the states change with a clock pulse. The crystal oscillator
 of the FPGA development board I used has a frequency of 25 MHz. The desired frequency I went with is 2.5 Hz, so the clock divider consists of a counter that counts up to 10000000.
 Every time the counter reaches that number, there is a signal named "ms_tick" that changes from 0 to 1 creating that pulse of the "slow" clock. That "ms_tick" is the clock we use
