@@ -22,5 +22,8 @@ Therefore, there are 3 different outputs which are represented by 3 different LE
 - extAeqB → A = B output (LED)
 - extAgrB → A > B output (LED)
 - extAsmB → A < B output (LED)
-## 
+
+## Technical Limitations
+-  The project was implemented in Xilinx ISE v10.1, which is a legacy product, therefore the code is formatted in VHDL-93.
+-  The inputs and outputs of the Spartan-II development board I used are Active-Low, so the I/O are inverted accordingly in the top level module.
 
