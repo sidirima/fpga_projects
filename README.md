@@ -22,10 +22,10 @@ The scope of this project is the exploration of versatility of VHDL programming.
 #### 3. [8-bit Barrel Shifter](/8_bit_Barrel_Shifter)
 Implementation of a barrel shifter with two direction logic rotation of the bits (left or right). We can select the amount of rotating bits with the use of a multiplexer.
 
-#### 4. 12-bit Dual Priority Encoder
+#### 4. [12-bit Dual Priority Encoder](/Dual_Priority_Encoder)
 With simple combinational logic, this project implements a dual priority encoder that detects the position of the two most significant bits that have a value of '1' and returns their position numbers in two different 7 Segment LED Displays.
 
-#### 5. 2 digit BCD Incrementor
+#### 5. 2 digit BCD Incrementor(/2_Digit_BCD_Incrementor)
 Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented on 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
 
 #### 6. Stopwatch with 4 Digits
