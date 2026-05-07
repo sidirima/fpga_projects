@@ -39,5 +39,7 @@ The output of the counter is represented on 2 different 7 Segment LED displays. 
 - full → _FULL_ flag (LED)
 - vacant → _VACANCY / SPACE AVAILABLE_ flag (LED)
 
-_*Note: The VHDL modules are implemented with Active-Low logic I/O and Common Anode 7 Segment LED Displays.*_
-
+## Technical Limitations
+- The project was implemented in Xilinx ISE v10.1, which is a legacy product, therefore it is formatted in VHDL-93.
+- The VHDL modules are implemented with Active-Low logic I/O due to the Spartan-II development board architecture.
+- The 7 Segment Displays used where Common Anode, so a Segment to be active, it must receive a "0".
