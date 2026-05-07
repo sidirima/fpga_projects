@@ -2,7 +2,7 @@
 
 This folder contains fun projects I implemented from examples from the following books, learning VHDL coding and FPGA implementation. Some of them were little tweaked, some of them are built from scratch.
 
-The code is written in VHDL-93, due to device limitations, as the FPGA used runs only in Xilinx ISE v10.1, which is a quite old version of a legacy suite. The FPGA used was a Spartan-II (XC2S100 - PQ208).
+The code is written in VHDL-93, due to device limitations, as the FPGA used is supported up to v10.1 of Xilinx ISE, which is a quite old version of a legacy suite. The FPGA used was a Spartan-II (XC2S100 - PQ208).
 <p align="center">
   <img width="999" height="756" alt="image" src="https://github.com/user-attachments/assets/6a5e32f6-b022-41b0-a2cb-d6382c8bd3dc" />
 
