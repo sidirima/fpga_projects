@@ -1,0 +1,36 @@
+-- The 16 Segment Display is Common Anode
+
+The 16 Segment Display used is KINGBRIGHT PSC05-11EWA
+(DIP18)
+1  -> Anode A |+----------+|  18 -> Anode B
+2  -> Anode M |+          +|  17 -> Anode N
+3  -> Anode K |+          +|  16 -> Anode C
+4  -> Anode H |+          +|  15 -> Anode P
+5  -> Anode U |+          +|  14 -> Anode R
+6  -> Anode S |+          +|  13 -> Anode D
+7  -> Anode T |+          +|  12 -> Anode dp
+8  -> Anode G |+          +|  11 -> COMMON CATHODE
+9  -> Anode F |+----------+/. 10 -> Anode E
+
+seg (15 downto 0)
+a    b   c   d   e   f  g  h  k  m  n  p  r  s  t  u
+15  14  13  12  11  10  9  8  7  6  5  4  3  2  1  0
+
+SIGNAL   -> FPGA PIN -> DIP-PIN
+-------------------------------
+seg(0)   ->   P136   -> PIN 5 
+seg(1)   ->   P129   -> PIN 7
+seg(2)   ->   P133   -> PIN 6
+seg(3)   ->   P111   -> PIN 14
+seg(4)   ->   P151   -> PIN 15
+seg(5)   ->   P147   -> PIN 17
+seg(6)   ->   P148   -> PIN 2
+seg(7)   ->   P141   -> PIN 3
+seg(8)   ->   P139   -> PIN 4
+seg(9)   ->   P125   -> PIN 8
+seg(10)  ->   P122   -> PIN 9
+seg(11)  ->   P120   -> PIN 10
+seg(12)  ->   P113   -> PIN 13
+seg(13)  ->   P149   -> PIN 16
+seg(14)  ->   P140   -> PIN 18 
+seg(15)  ->   P150   -> PIN 1
