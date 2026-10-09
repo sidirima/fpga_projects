@@ -13,13 +13,13 @@ These two different designs are depicted in the picture below.
   <img <img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/3b7df304-fb59-459f-9a34-8f0c14290427" />
 </p>
 
-Furthermore, there is a maximum capacity of cars that can enter the parking lot, and this is an input that must be declared before starting the counter. To simulate this, we use an 8-bit input with DIP switches, so the maximum number of spaces in the parking lot is 255.
+To design the dual edge detector FSM we can use StateCAD, a simple FSM designer program included in Xilinx ISE suite and then derive the VHDL code equivalent to the FSM or we can directly write the FSM on VHDL.
+For dual edge detecting, we need the output enabled for one clock cycle when the input changes from 0 to 1 (rising edge) and also from 1 to 0 (falling edge).
 
-The functionality of the entering or exiting procedures are checked in the parking_lot_fsm module and they are as follows:
-- _**Car Enters the Parking Lot**_: Sensor A Enabled → Sensor A & B Enabled → Sensor B Enabled → Sensors Disabled
-- _**Car Exits the Parking Lot**_: Sensor B Enabled → Sensor A & B Enabled → Sensor A Enabled → Sensors Disabled
+Due to the 25 MHz oscillator of the FPGA, this project is impossible to implement on physical form, so we need to create a **testbench** file to determine the functionality of designed FSM. This file is dual_edge_detector_tb.vhd.
+In the file, there are two instantiations of the edge detector, one for each architecture (Moore-based and Mealy-based) so that we can monitor the output simultaneously using a Behavioral Simulation program, such as ISE Simulator or ModelSim.
 
-The two sensors are simulated with the use of two pushbuttons. There is also a third pushbutton used that performs the "Reset" function. Those pushbuttons are already physically debounced, so there is no implementation of a debouncer circuit in VHDL. 
+
 
 The counter increases by 1 every time a car enters the lot, and decreases by 1 every time a car exits the lot. The counter cannot be incremented when reached the maximum capacity of spaces in the parking lot. When it reaches that state, it triggers a "FULL" flag that is represented by an LED. A different LED shows up while there are available spaces, named "vacant". Furthermore, the counter cannot be decremented further than 0. 
 
@@ -34,16 +34,10 @@ The output of the counter is represented on 2 different 7 Segment LED displays. 
 ## Inputs & Outputs
 **INPUTS**
 - Reset → Performs a clear register and counters function (Pushbutton)
-- a → Sensor A (Pushbutton)
-- b → Sensor B (Pushbutton)
-- max_cap → 8-bit binary for desired maximum parking spaces (DIP Switches)
+- Level → Input Signal (Pulse)
 
 **OUTPUTS**
-- sseg0 → LSD output (7 Segment Display)
-- sseg1 → MSD output (7 Segment Display)
-- ovf → 2 bit Overflow flag (LEDs)
-- full → _FULL_ flag (LED)
-- vacant → _VACANCY / SPACE AVAILABLE_ flag (LED)
+- edge → Output signal (Pulse)
 
 ## Technical Limitations
 - The project was implemented in Xilinx ISE v10.1, which is a legacy product, therefore it is formatted in VHDL-93.
