@@ -12,30 +12,34 @@ So, for the decimal number **42**, the BCD equivalent number is: **0100 0010**.
 </p>
 
 Also, we need to create a clock with 0.1 second period for our counting to be accurate and be able to see the 7 segment digits change. This clock signal is a very 
-"slow" clock in contrast with the 25 MHz that the Spartan-II FPGA uses. For that, we use the **clock division** technique,
-the simplest yet best known solution to create a custom clock signal.
+"slow" clock in contrast with the 25 MHz crystal oscillator that the Spartan-II FPGA uses. Thus, we use the **clock division** technique,the simplest yet best known solution to create a custom clock signal.
+So, we create a signal named **ms_tick** and a register able to count up to 2500000. That gives us a "tick" every 0.1 seconds to use as a clock for the BCD counter.
 
-The functionality of the entering or exiting procedures are checked in the parking_lot_fsm module and they are as follows:
-- _**Car Enters the Parking Lot**_: Sensor A Enabled → Sensor A & B Enabled → Sensor B Enabled → Sensors Disabled
-- _**Car Exits the Parking Lot**_: Sensor B Enabled → Sensor A & B Enabled → Sensor A Enabled → Sensors Disabled
+The "enhanced version" of the simple stopwatch has the following additional features:
+- One additional digit for minutes, so the display format is now **M.SS.D**
+- A signal to control the direction of counting named **up**, controlled via a DIP-Switch. 
 
-The two sensors are simulated with the use of two pushbuttons. There is also a third pushbutton used that performs the "Reset" function. Those pushbuttons are already physically debounced, so there is no implementation of a debouncer circuit in VHDL. 
+To keep track of the counters, we create a 4-bit register for each one of the 4 digits, named d3 ~ d0 from MSB to LSB accordingly. Also, since we can now control the direction of counting,
+we need to create two seperate counters, an up-counter and a down counter. The counters for digits d0, d1,d3 count from 0 ~ 9 and then overflow to the next digit, but the counter for d2 will count from 0 ~ 5 and then overflow, because there are 60 seconds in one minute. The whole process is described as a nested if scenario on the enhanced_stopwatch.vhd file of the project.
 
-The counter increases by 1 every time a car enters the lot, and decreases by 1 every time a car exits the lot. The counter cannot be incremented when reached the maximum capacity of spaces in the parking lot. When it reaches that state, it triggers a "FULL" flag that is represented by an LED. A different LED shows up while there are available spaces, named "vacant". Furthermore, the counter cannot be decremented further than 0. 
+As for the output, we need to use 4 different 7 segment displays. The Spartan-II board we use does not support a 4-digit 7 segment display, so we need to use an external display. Also, to avoid the usage
+of 32 different pins to control all those segments, we will use **7 Segment Display Multiplexation**. Now, we only need to use 8 different pins of the FPGA to control the segments for each number and 4 additional ones to control the anodes of each display, depending on what digit need to be represented. The idea is depicted in the picture below.The multiplexation is done disp_hex_mux.vhd file of the project.
+<p align = "center">
+  <img <img width="705" height="555" alt="image" src="https://github.com/user-attachments/assets/adfdde73-a67d-491d-bf73-1fec4effc4ad" />
+</p>
 
-The output of the counter is represented on 2 different 7 Segment LED displays. Those displays are updated live (with the pulse of an internal clock signal) every time a car enters or exits the lot. To represent the counter number on different 7 Segment Displays, there is an FSM implementation of the Double Dabble Algorithm, inside the bin2bcd_dd.vhd module, which is instantiated in the top level module. In addition to the 7 Segment Displays, due to hardware limitations, the MSD of the BCD number (the "hundreds") is represented with the use of 2 different LEDs, named as "ovf" which stands for Overflow. If the MSD is 0, none of the LEDs light up, if the MSD is 1 only 1 of the LEDs light up and last, in case the number is 2, both of the LEDs are enabled. 
-
+At this point, we have 
 ## Module Structure
-- [pakring_lot_occupancy_top](pakring_lot_occupancy_top.vhd)
-  - [pakring_lot_fsm](pakring_lot_fsm.vhd)
-  - [hex_to_7_segment](hex_to_7_segment.vhd)
+- [enhanced_stopwatch_top](enhanced_stopwatch_top.vhd)
+  - [enhanced_stopwatch](enhanced_stopwatch.vhd)
+  - [disp_hex_mux](disp_hex_mux.vhd)
   - [bin2bcd_dd](bin2bcd_dd.vhd)
 
 ## Inputs & Outputs
 **INPUTS**
-- Reset → Performs a clear register and counters function (Pushbutton)
-- a → Sensor A (Pushbutton)
-- b → Sensor B (Pushbutton)
+- clr → Performs a clear register and counters function (Pushbutton)
+- go → Start counting (Pushbutton)
+- up → Counting direction (DIP-Switch)
 - max_cap → 8-bit binary for desired maximum parking spaces (DIP Switches)
 
 **OUTPUTS**
