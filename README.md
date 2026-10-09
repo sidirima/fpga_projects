@@ -28,7 +28,7 @@ With simple combinational logic, this project implements a dual priority encoder
 #### 5. [2 digit BCD Incrementor](/2_Digit_BCD_Incrementor)
 Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented on 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
 
-#### 6. [Stopwatch with 4 Digits]
+#### 6. [Stopwatch with 4 Digits](Stopwatch_with_4_Digits)
 Using simple sequential logic (registers), this project implements a stopwatch with four digits, represented on 7 Segment LED Displays, and the functions of counting up or down and start / pause.
 
 #### 7. [Rotating Clock Animation](Rotating_Clock_Animation)
