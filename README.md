@@ -38,3 +38,6 @@ A fun made project of a rotating "clock" sequence.
 #### 8. [Parking Lot Occupancy Counter](Parking_Lot_Occupancy_Counter)
 With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. The counter is represented on 7 Segment LED Displays, and there are also flags for "Full Parking Lot" and "Space Available".
 
+
+#### 9. [Dual Edge Detector](Dual_Edge_Detector)
+A project to determine the best use for each Finite State Machine design. A comparison between Moore and Mealy machine architecture. Experimentation with StateCAD and testbench files. 
