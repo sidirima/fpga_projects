@@ -5,8 +5,15 @@ The suggested experiment focus on the expansion on the logic of a simple 3 digit
 digits, counting from 00.0 to 99.9 seconds and then wraps around. It contains a synchronous clear signal **clr**, which returns the count to 00.0 and an enable signal **go**, which enables or suspends
 counting.
 
-The counting procedure is a simple BCD counter. In BCD format, a decimal number is represented by a sequence of 4 digits. So, for the decimal number **42**, the BCD equivalent number is: **0100 0010**. 
-<p align='center' <img width="142" height="201" alt="image" src="https://github.com/user-attachments/assets/f9088615-2db1-4d87-bf4d-70b47ccc7aa4" />
+The counting procedure is a simple BCD counter. In BCD format, a decimal number is represented by a sequence of 4 digits, as shown in the picture below.
+So, for the decimal number **42**, the BCD equivalent number is: **0100 0010**. 
+<p align="center"> 
+  <img width="142" height="201" alt="image" src="https://github.com/user-attachments/assets/f9088615-2db1-4d87-bf4d-70b47ccc7aa4" />
+</p>
+
+Also, we need to create a clock with 0.1 second period for our counting to be accurate and be able to see the 7 segment digits change. This clock signal is a very 
+"slow" clock in contrast with the 25 MHz that the Spartan-II FPGA uses. For that, we use the **clock division** technique,
+the simplest yet best known solution to create a custom clock signal.
 
 The functionality of the entering or exiting procedures are checked in the parking_lot_fsm module and they are as follows:
 - _**Car Enters the Parking Lot**_: Sensor A Enabled → Sensor A & B Enabled → Sensor B Enabled → Sensors Disabled
