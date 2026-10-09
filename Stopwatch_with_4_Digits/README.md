@@ -28,7 +28,8 @@ of 32 different pins to control all those segments, we will use **7 Segment Disp
   <img <img width="705" height="555" alt="image" src="https://github.com/user-attachments/assets/adfdde73-a67d-491d-bf73-1fec4effc4ad" />
 </p>
 
-At this point, we have 
+At this point, in theory we have a working stopwatch. We also need to create a 4 digit multiplexed 7 segment display. This is performed in the schematic below. We use Common Anode 7 Segment Displays, so we control the Anodes via PNP transistors (type 2N3906). 
+
 ## Module Structure
 - [enhanced_stopwatch_top](enhanced_stopwatch_top.vhd)
   - [enhanced_stopwatch](enhanced_stopwatch.vhd)
@@ -37,17 +38,13 @@ At this point, we have
 
 ## Inputs & Outputs
 **INPUTS**
-- clr → Performs a clear register and counters function (Pushbutton)
-- go → Start counting (Pushbutton)
-- up → Counting direction (DIP-Switch)
-- max_cap → 8-bit binary for desired maximum parking spaces (DIP Switches)
+- btn(2) → Start counting (Pushbutton)
+- btn(1) → Counting direction (DIP-Switch)
+- btn(0) → Performs a clear register and counters function (Pushbutton)
 
 **OUTPUTS**
-- sseg0 → LSD output (7 Segment Display)
-- sseg1 → MSD output (7 Segment Display)
-- ovf → 2 bit Overflow flag (LEDs)
-- full → _FULL_ flag (LED)
-- vacant → _VACANCY / SPACE AVAILABLE_ flag (LED)
+- sseg → Digit Output (Multiplexed 7 Segment Display)
+- an → Anode Selector (to transistors)
 
 ## Technical Limitations
 - The project was implemented in Xilinx ISE v10.1, which is a legacy product, therefore it is formatted in VHDL-93.
