@@ -19,7 +19,7 @@ to change the states of the rotating animation sequence.
 
 The animation is continuous and the only interaction the user can have with the system is to press a pushbutton for reseting the procedure.
 
-<video src="https://github.com/sidirima/fpga_projects/blob/main/Rotating_Clock_Animation/VID_20261009_120442.mp4" width="320" height="240" controls></video>
+In the folder there is a [video file](https://github.com/sidirima/fpga_projects/blob/main/Rotating_Clock_Animation/VID_20261009_120442.mp4) that shows the animation sequence running live on the FPGA.
 
 ## Module Structure
 - [rot_clock_top](rot_clock_top.vhd)
