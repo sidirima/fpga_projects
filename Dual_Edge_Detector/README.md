@@ -10,7 +10,7 @@ The difference between the two designs is that Moore-based FSMs are synchronous,
 On the other hand, Mealy-based FSMs are asynchronous, meaning they are not always clock-dependent. Therefore, the output state is dependent on the current state AND the inputs state.
 These two different designs are depicted in the picture below.
 <p align="center">
-  <img <img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/3b7df304-fb59-459f-9a34-8f0c14290427" />
+  <img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/3b7df304-fb59-459f-9a34-8f0c14290427" />
 </p>
 
 To design the dual edge detector FSM we can use StateCAD, a simple FSM designer program included in Xilinx ISE suite and then derive the VHDL code equivalent to the FSM or we can directly write the FSM on VHDL.
@@ -18,6 +18,14 @@ For dual edge detecting, we need the output enabled for one clock cycle when the
 
 Due to the 25 MHz oscillator of the FPGA, this project is impossible to implement on physical form, so we need to create a **testbench** file to determine the functionality of designed FSM. This file is dual_edge_detector_tb.vhd.
 In the file, there are two instantiations of the edge detector, one for each architecture (Moore-based and Mealy-based) so that we can monitor the output simultaneously using a Behavioral Simulation program, such as ISE Simulator or ModelSim. Also, we define a 25 MHz clock signal and we perform tests for rising and falling edge detection separately, as well as a test with a 40 ns pulse. 
+
+Results of Behavioral Simulation of dual_edge_detector_tb.vhd file are presented on the picture below. Simulation is performed using ISE Simulator. 
+When an edge is detected in _level_ input signal, the output of each of the 2 designed FSMs changes accordingly. 
+<p align="center">
+  <img <img width="994" height="260" alt="Στιγμιότυπο οθόνης_2026-10-13_21-18-01" src="https://github.com/user-attachments/assets/1997ba73-c8ce-487f-9c6f-54b5604f5f27" />
+</p>
+
+After performing the test, we can determine that while the Mealy-based FSM is quicker in response, its results may some times be unexpected. On the other hand, the Moore-based FSM always responds according to planned design although there is a standard delay of 20 ns in its response.
 
 ## Module Structure
 ### Implementation
