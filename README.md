@@ -28,14 +28,17 @@ With simple combinational logic, this project implements a dual priority encoder
 #### 5. [2 digit BCD Incrementor](/2_Digit_BCD_Incrementor)
 Combinational logic at its peak! This simple circuit reads an 8bit binary number, increments it by 1 and decodes the value to BCD format. Then, the output digits are represented on 7 Segment LED Displays. There is also an overflow flag, when the value of the BCD number can not be represented in only 2 displays.
 
-#### 6. [Stopwatch with 4 Digits](Stopwatch_with_4_Digits)
+#### 6. [PWM_LED_Dimmer](/PWM_LED_Dimmer)
+Using a simple counter and for loops to generate a variable duty cycle square wave generator that dims LEDs using PWM principle. Functionality verification can be performed with an oscilloscope or using the testbench file. 
+
+#### 7. [Stopwatch with 4 Digits](/Stopwatch_with_4_Digits)
 Using simple sequential logic (registers), this project implements a stopwatch with four digits, represented on 7 Segment LED Displays, and the functions of counting up or down and start / pause.
 
-#### 7. [Rotating Clock Animation](Rotating_Clock_Animation)
+#### 8. [Rotating Clock Animation](/Rotating_Clock_Animation)
 An easy way to test your skills understanding counters, clock dividers and simple FSM design, with the help of a 16-Segment LED Display.
 A fun made project of a rotating "clock" sequence.
 
-#### 8. [Parking Lot Occupancy Counter](Parking_Lot_Occupancy_Counter)
+#### 9. [Parking Lot Occupancy Counter](Parking_Lot_Occupancy_Counter)
 With the use of sequential logic and Fine State Machine implementation we create a project that simulates a parking lot occupancy counter. The counter is represented on 7 Segment LED Displays, and there are also flags for "Full Parking Lot" and "Space Available".
 
 
