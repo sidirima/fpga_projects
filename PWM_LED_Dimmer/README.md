@@ -18,6 +18,8 @@ Each pushbutton press varies the duty cycle by w/16. By pushing the pushbutton, 
 
 To perform synchronous variation of brightness on all 8 segments (including the dp), when instantiating the led_dimmer entities we use a "FOR" loop. This will generate 8 independent led_dimmer entities, each one used when necessary, defined by the w_count value that needs to be displayed.
 
+To check that every press of the pushbutton changes the duty cycle value by w/16, we can use a testbench file **led_dimmer_tb.vhd** or we can use an oscilloscope. In the video file contatined in the project folder we can see the oscilloscope screen and the dimming of the LEDs while pressing the pushbutton.
+
 ## Module Structure
 - [led_dimmer_top](led_dimmer_top.vhd)
   - [led_dimmer](led_dimmer.vhd)
