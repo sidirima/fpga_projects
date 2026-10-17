@@ -34,3 +34,5 @@ seg(12)  ->   P113   -> PIN 13
 seg(13)  ->   P149   -> PIN 16
 seg(14)  ->   P140   -> PIN 18 
 seg(15)  ->   P150   -> PIN 1
+
+NOTE: Pullup resistors' value used is 47 Ohms
